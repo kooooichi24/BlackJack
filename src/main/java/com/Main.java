@@ -9,5 +9,7 @@ public class Main {
         for (Card card : deckList) {
             System.out.println(card);
         }
+
+        System.out.println(deck.hit());
     }
 }

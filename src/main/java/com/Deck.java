@@ -25,4 +25,10 @@ public class Deck {
     public List<Card> getDeck() {
         return deck;
     }
+
+    // 最後の要素を削除 & 返す
+    public Card hit() {
+        Card hitCard = deck.remove(deck.size()-1); // 最後の要素を指定したいけど、引数にマイナス1ってダサいよね
+        return hitCard;
+    }
 }
