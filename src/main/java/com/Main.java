@@ -28,5 +28,7 @@ public class Main {
         System.out.println("PLAYER FINAL TOTAL SCORE: " + player.getTotalScore());
         System.out.println("DEALER FINAL TOTAL SCORE: " + dealer.getTotalScore());
         System.out.println("WINNER: " + winner);
+
+        player.showHands();
     }
 }

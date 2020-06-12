@@ -29,4 +29,8 @@ public class Player {
     public boolean isBust() {
         return hands.isBust();
     }
+
+    public void showHands() {
+        System.out.println(hands);
+    }
 }
