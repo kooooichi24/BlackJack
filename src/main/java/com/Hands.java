@@ -22,16 +22,18 @@ public class Hands {
         for (Card card : hands) {
             if (card.getRank().equals("A")) {
                 aceCount++;
-            } else {
-                totalScore += card.getValue();
             }
+
+            totalScore += card.getValue();
         }
 
+        // エースを11とした場合、差分の10が追加される
+        // 差分の10を追加して21を超えない場合はAを11とする
         while (aceCount > 0) {
-            if (totalScore + 11 > BLACKJACK_BORDER) {
+            if (totalScore + 10 > BLACKJACK_BORDER) {
                 totalScore += Card.SPADE_A.getValue();
             } else {
-                totalScore += 11;
+                totalScore += 10;
             }
             aceCount--;
         }
