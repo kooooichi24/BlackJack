@@ -73,6 +73,10 @@ public enum Card {
         return rank;
     }
 
+    public int aceIs21() {
+        return 21;
+    }
+
     @Override
     public String toString() {
         return suit + rank + ":" + value;

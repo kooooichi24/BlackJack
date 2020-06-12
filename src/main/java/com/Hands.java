@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Hands {
     private List<Card> hands;
+    private final static int BLACKJACK_BORDER = 21;
 
     public Hands() {
         hands = new ArrayList<>();
@@ -27,8 +28,8 @@ public class Hands {
         }
 
         while (aceCount > 0) {
-            if (totalScore + 11 > 21) {
-                totalScore += 1;
+            if (totalScore + 11 > BLACKJACK_BORDER) {
+                totalScore += Card.SPADE_A.getValue();
             } else {
                 totalScore += 11;
             }
@@ -39,7 +40,7 @@ public class Hands {
     }
 
     public boolean isBust() {
-        return 21 < getTotalScore();
+        return BLACKJACK_BORDER < getTotalScore();
     }
 
     @Override

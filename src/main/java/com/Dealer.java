@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Dealer {
     private Hands hands;
-    private static final int borderScore = 17;
+    private static final int BORDER_SCORE = 17;
 
     public Dealer() {
         hands = new Hands();
@@ -27,6 +27,6 @@ public class Dealer {
     }
 
     public int getBorderScore() {
-        return borderScore;
+        return BORDER_SCORE;
     }
 }
