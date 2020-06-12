@@ -16,7 +16,8 @@ public class Main {
             player.hit(deck.hit());
             if (player.isBust()) break;
 
-            System.out.println("total score: " + player.getTotalScore());
+            System.out.print("PLAYER HANDS: ");
+            player.showHands();
             isHit = player.isHit();
         }
 

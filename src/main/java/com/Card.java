@@ -69,6 +69,10 @@ public enum Card {
         return value;
     }
 
+    public String getRank() {
+        return rank;
+    }
+
     @Override
     public String toString() {
         return suit + rank + ":" + value;

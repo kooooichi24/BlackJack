@@ -14,8 +14,7 @@ public class Player {
     }
 
     public int getTotalScore() {
-        int totalScore = hands.getTotalScore();
-        return totalScore;
+        return hands.getTotalScore();
     }
 
     public boolean isHit() {
