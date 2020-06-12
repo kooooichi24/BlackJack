@@ -21,7 +21,7 @@ public class Main {
             isHit = player.isHit();
         }
 
-        while (dealer.getTotalScore() < 17) {
+        while (dealer.getTotalScore() < dealer.getBorderScore()) {
             dealer.hit(deck.hit());
         }
 
