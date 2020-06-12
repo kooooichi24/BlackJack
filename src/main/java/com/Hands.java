@@ -22,8 +22,7 @@ public class Hands {
         return totalScore;
     }
 
-    @Override
-    public String toString() {
-        return hands.toString();
+    public boolean isBust() {
+        return 21 < getTotalScore();
     }
 }

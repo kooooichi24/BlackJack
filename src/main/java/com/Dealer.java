@@ -2,20 +2,19 @@ package main.java.com;
 
 import java.util.Scanner;
 
-public class Player {
+public class Dealer {
     private Hands hands;
 
-    public Player() {
+    public Dealer() {
         hands = new Hands();
+    }
+
+    public int getTotalScore() {
+        return hands.getTotalScore();
     }
 
     public void hit(Card card) {
         hands.addCard(card);
-    }
-
-    public int getTotalScore() {
-        int totalScore = hands.getTotalScore();
-        return totalScore;
     }
 
     public boolean isHit() {
