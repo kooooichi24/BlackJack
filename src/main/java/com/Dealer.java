@@ -17,15 +17,11 @@ public class Dealer {
         hands.addCard(card);
     }
 
-    public boolean isHit() {
-        System.out.print("ヒットしますか？[y/n]: ");
-        Scanner scanner = new Scanner(System.in);
-        String yn = scanner.nextLine();
-
-        return yn.equals("y") ? true : false;
-    }
-
     public boolean isBust() {
         return hands.isBust();
+    }
+
+    public void showHands() {
+        System.out.println(hands);
     }
 }

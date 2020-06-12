@@ -25,10 +25,16 @@ public class Main {
         }
 
         String winner = judge.jugdeWinnter(player, dealer);
-        System.out.println("PLAYER FINAL TOTAL SCORE: " + player.getTotalScore());
-        System.out.println("DEALER FINAL TOTAL SCORE: " + dealer.getTotalScore());
-        System.out.println("WINNER: " + winner);
-
+        System.out.println("----------------------------------------");
+        System.out.print("PLAYER HANDS            : ");
         player.showHands();
+        System.out.println("PLAYER FINAL TOTAL SCORE: " + player.getTotalScore());
+        System.out.println("----------------------------------------");
+        System.out.print("DEALER HANDS            : ");
+        dealer.showHands();
+        System.out.println("DEALER FINAL TOTAL SCORE: " + dealer.getTotalScore());
+        System.out.println("----------------------------------------");
+        System.out.println("WINNER: " + winner);
+        System.out.println("----------------------------------------");
     }
 }
