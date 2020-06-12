@@ -1,25 +1,26 @@
 package main.java.com;
 
 public class Judge {
-    public String jugdeWinnter(Player player, Dealer dealer) {
+    public GameResult jugdeWinner(Player player, Dealer dealer) {
         // bust
         if (player.isBust() && dealer.isBust()) {
-            return "DEALER";
+            return GameResult.DEALER_WIN;
         }
         if (player.isBust()) {
-            return "DEALER";
+            return GameResult.DEALER_WIN;
         }
         if (dealer.isBust()) {
-            return "PLAYER";
+            return GameResult.PLAYER_WIN;
         }
 
         // compare
-        if (player.getTotalScore() <= dealer.getTotalScore()) {
-            return "DEALER";
+        if (player.getTotalScore() < dealer.getTotalScore()) {
+            return GameResult.DEALER_WIN;
         }
         if (player.getTotalScore() > dealer.getTotalScore()) {
-            return "PLAYER";
+            return GameResult.PLAYER_WIN;
         }
-        return "hoge";
+
+        return GameResult.DRAW;
     }
 }

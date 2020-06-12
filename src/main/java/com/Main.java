@@ -11,21 +11,20 @@ public class Main {
 
         System.out.print("Initialization Value: ");
 
-        boolean isHit = player.isHit();
-        while (isHit) {
+        // player
+        while (player.isHit()) {
             player.hit(deck.hit());
             if (player.isBust()) break;
 
             System.out.print("PLAYER HANDS: ");
             player.showHands();
-            isHit = player.isHit();
         }
 
-        while (dealer.getTotalScore() < dealer.getBorderScore()) {
+        // dealer
+        while (dealer.isHit()) {
             dealer.hit(deck.hit());
         }
 
-        String winner = judge.jugdeWinnter(player, dealer);
         System.out.println("----------------------------------------");
         System.out.print("PLAYER HANDS            : ");
         player.showHands();
@@ -35,7 +34,7 @@ public class Main {
         dealer.showHands();
         System.out.println("DEALER FINAL TOTAL SCORE: " + dealer.getTotalScore());
         System.out.println("----------------------------------------");
-        System.out.println("WINNER: " + winner);
+        System.out.println(judge.jugdeWinner(player, dealer));
         System.out.println("----------------------------------------");
     }
 }

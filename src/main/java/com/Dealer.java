@@ -29,4 +29,8 @@ public class Dealer {
     public int getBorderScore() {
         return BORDER_SCORE;
     }
+
+    public boolean isHit() {
+        return getTotalScore() < BORDER_SCORE;
+    }
 }
